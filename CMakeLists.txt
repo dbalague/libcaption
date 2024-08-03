@@ -73,7 +73,8 @@ set(CAPTION_HEADERS
   caption/xds.h
 )
 
-add_library(caption ${CAPTION_SOURCES})
+add_library(caption SHARED ${CAPTION_SOURCES})
+add_library(caption_static STATIC  ${CAPTION_SOURCES})
 
 if(ENABLE_RE2C)
   add_dependencies(caption re2c)
